@@ -10,16 +10,24 @@ pipeline{
             steps {
                     sh '''
 		    	cd gradle-yn
-			chmod +x gradlew
-			./gradlew build
-			'''
+		    	chmod +x gradlew
+			    ./gradlew build
+			        '''
+                // script{
+                          
+		    	// cd gradle-yn
+		    	// chmod +x gradlew
+			    // ./gradlew build
+			        
+                // }
+
 			    }
         }
-        stage('Run Jar File') {
-            steps {
-                    sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
-            }
-        }
+        // stage('Run Jar File') {
+        //     steps {
+        //             sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
+        //     }
+        // }
        
     //     stage('Archive The Artifacts'){
     //         steps{
@@ -30,11 +38,11 @@ pipeline{
         
     }
     
-    post{
-        success{
-            archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
-        }
-    }
+    // post{
+    //     success{
+    //         archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
+    //     }
+    // }
     
     
     
