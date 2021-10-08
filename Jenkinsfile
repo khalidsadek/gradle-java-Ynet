@@ -1,5 +1,11 @@
 pipeline{
     agent any
+	
+	 options {
+        timeout(time: 3, unit: 'MINUTES')   // timeout on whole pipeline job
+    }
+
+	
     stages{
         stage('Git Clone'){
             steps{
