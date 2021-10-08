@@ -1,9 +1,5 @@
 pipeline{
     agent any
-	
-	 options {
-        timeout(time: 3, unit: 'MINUTES')   // timeout on whole pipeline job
-    }
 
 	
     stages{
@@ -23,7 +19,7 @@ pipeline{
 
 		    	//cd gradle-yn
 		    	//chmod +x gradlew
-			    ./gradlew build
+			    "./gradlew build"
 
                 }
 
