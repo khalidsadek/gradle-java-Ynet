@@ -8,12 +8,16 @@ pipeline{
          }
         stage('Build Gradle') {
             steps {
-                    sh "cd gradle-yn && chmod +x gradlew && ./gradlew build"
+                    sh '''
+		    	cd gradle-yn
+			chmod +x gradlew
+			./gradlew build
+			'''
 			    }
         }
         stage('Run Jar File') {
             steps {
-                    sh "java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar"
+                    sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
             }
         }
        
