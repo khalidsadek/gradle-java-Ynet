@@ -14,11 +14,11 @@ pipeline{
 			    ./gradlew build
 			        '''
                 // script{
-                          
+
 		    	// cd gradle-yn
 		    	// chmod +x gradlew
 			    // ./gradlew build
-			        
+
                 // }
 
 			    }
@@ -28,22 +28,22 @@ pipeline{
         //             sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
         //     }
         // }
-       
+
     //     stage('Archive The Artifacts'){
     //         steps{
     //             archiveArtifacts artifacts: '**/output.html', followSymlinks: false
     //         }
     //     }
-        
-        
+
+
     }
-    
+
     // post{
     //     success{
     //         archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
     //     }
     // }
-    
-    
-    
+
+
+
 }
