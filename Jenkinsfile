@@ -10,18 +10,18 @@ pipeline{
          }
         stage('Build Gradle') {
             steps {
-                //     sh '''
-		    	// cd gradle-yn
-		    	// chmod +x gradlew
-			    // ./gradlew build
-			    //     '''
-                script{
+                    sh '''
+		    	cd gradle-yn
+		    	chmod +x gradlew
+			    ./gradlew build
+			        '''
+                // script{
 
-		    	//cd gradle-yn
-		    	//chmod +x gradlew
-			    "./gradlew build"
+		    	// //cd gradle-yn
+		    	// //chmod +x gradlew
+			    // "./gradlew build"
 
-                }
+                // }
 
 			    }
         }
@@ -34,13 +34,13 @@ pipeline{
         //     }
         // }
 
-      stage('Run'){
-            steps{
-            sh 'gradle-yn'    
-		    sh './gradlew run'
+    //   stage('Run'){
+    //         steps{
+    //         sh 'gradle-yn'    
+	// 	    sh './gradlew run'
             
-	    }
-        }
+	//     }
+    //     }
 
 
 
