@@ -36,7 +36,7 @@ pipeline{
 
       stage('Run'){
             steps{
-                
+            sh 'gradle-yn'    
 		    sh './gradlew run'
             
 	    }
