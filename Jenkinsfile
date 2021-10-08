@@ -8,18 +8,18 @@ pipeline{
          }
         stage('Build Gradle') {
             steps {
-                    sh '''
-		    	cd gradle-yn
-		    	chmod +x gradlew
-			    ./gradlew build
-			        '''
-                // script{
-
+                //     sh '''
 		    	// cd gradle-yn
 		    	// chmod +x gradlew
 			    // ./gradlew build
+			    //     '''
+                script{
 
-                // }
+		    	//cd gradle-yn
+		    	//chmod +x gradlew
+			    ./gradlew build
+
+                }
 
 			    }
         }
