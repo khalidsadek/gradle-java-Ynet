@@ -15,7 +15,7 @@ pipeline{
             steps {
                     sh '''
 		    	cd gradle-yn
-		    	
+                gradle clean
 			    gradle build
 			        '''
 		    	// //cd gradle-yn
