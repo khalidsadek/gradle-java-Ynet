@@ -9,9 +9,9 @@ pipeline{
             }
          }
         stage('Build Gradle') {
-// 		 options {
-//                 timeout(time: 3, unit: "MINUTES")
-//             }
+		 options {
+                timeout(time: 7, unit: "MINUTES")
+            }
             steps {
                     sh '''
 		    	cd gradle-yn
