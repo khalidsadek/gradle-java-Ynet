@@ -9,9 +9,9 @@ pipeline{
             }
          }
         stage('Build Gradle') {
-		 options {
-                timeout(time: 3, unit: "MINUTES")
-            }
+// 		 options {
+//                 timeout(time: 3, unit: "MINUTES")
+//             }
             steps {
                     sh '''
 		    	cd gradle-yn
@@ -55,9 +55,9 @@ pipeline{
 
     post{
         success{
-          	 options {
-                timeout(time: 3, unit: "MINUTES")
-            }
+//           	 options {
+//                 timeout(time: 3, unit: "MINUTES")
+//             }
                    sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
             
         
