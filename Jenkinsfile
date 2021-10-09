@@ -25,19 +25,19 @@ pipeline{
 
 			    }
         }
-        stage('Run Jar File') {
-            steps {
-                    sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
-            }
-        }
+        // stage('Run Jar File') {
+        //     steps {
+        //             sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
+        //     }
+        // }
 
-    //   stage('Run'){
-    //         steps{
-    //         sh 'gradle-yn'    
-	// 	    sh './gradlew run'
+      stage('Run'){
+            steps{
+         //   sh 'gradle-yn'    
+		    sh 'gradle run'
             
-	//     }
-    //     }
+	    }
+        }
 
 
 
