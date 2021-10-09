@@ -18,14 +18,9 @@ pipeline{
 		    	
 			    gradle build
 			        '''
-                // script{
-
 		    	// //cd gradle-yn
 		    	// //chmod +x gradlew
 			    // "./gradlew build"
-
-                // }
-
 			    }
         }
         stage('Run Jar File') {
@@ -43,22 +38,17 @@ pipeline{
     //     }
 
 
-
         // stage('Archive The Artifacts'){
         //     steps{
         //         archiveArtifacts artifacts: '**/*.html', followSymlinks: false
         //     }
         // }
-
-
     }
 
     post{
         success{
-          
                 archiveArtifacts artifacts: '**/*.html', followSymlinks: false
-            
-        
+    
            // archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
         }
     }
