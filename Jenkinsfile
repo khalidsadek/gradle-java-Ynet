@@ -55,15 +55,8 @@ pipeline{
 
     post{
         success{
-<<<<<<< HEAD
           
                 archiveArtifacts artifacts: '**/*.html', followSymlinks: false
-=======
-//           	 options {
-//                 timeout(time: 3, unit: "MINUTES")
-//             }
-                   sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
->>>>>>> e67aba4ded0add037fa76979ae1b04d8a40f107b
             
         
            // archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
