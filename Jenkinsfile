@@ -12,8 +12,8 @@ pipeline{
             steps {
                     sh '''
 		    	cd gradle-yn
-		    	chmod +x gradlew
-			    ./gradlew build
+		    	
+			    gradle build
 			        '''
                 // script{
 
@@ -50,11 +50,11 @@ pipeline{
 
     }
 
-    // post{
-    //     success{
-    //         archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
-    //     }
-    // }
+    post{
+        success{
+            archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
+        }
+    }
 
 
 
