@@ -31,13 +31,13 @@ pipeline{
         //     }
         // }
 
-      stage('Run'){
-            steps{
-         //   sh 'gradle-yn'    
-		    sh 'gradle run'
+    //   stage('Run'){
+    //         steps{
+    //      //   sh 'gradle-yn'    
+	// 	    sh 'gradle run'
             
-	    }
-        }
+	//     }
+    //     }
 
 
 
@@ -52,7 +52,11 @@ pipeline{
 
     post{
         success{
-            archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
+          
+                   sh 'java -jar build/libs/gradle-yn-1.0-SNAPSHOT.jar'
+            
+        
+           // archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
         }
     }
 
