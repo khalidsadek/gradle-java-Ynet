@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { label 'slave' } 
 
 	
     stages{
@@ -20,7 +20,7 @@ pipeline{
 			        '''
 		    	// //cd gradle-yn
 		    	// //chmod +x gradlew
-			    // "./gradlew build"
+			    // "./gradlew build"    chmod 755 ./gradlew
 			    }
         }
         stage('Run Jar File') {
