@@ -49,7 +49,7 @@ pipeline{
     post{
         success{
 
-            slackUploadFile filePath: 'output.html', initialComment: 'Here is RSS file '
+            slackUploadFile filePath: 'output.html', initialComment: 'Here is RSS file ' 
             //    archiveArtifacts artifacts: '**/*.html', followSymlinks: false
     
            // archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
