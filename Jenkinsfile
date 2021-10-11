@@ -38,16 +38,19 @@ pipeline{
     //     }
 
 
-        // stage('Archive The Artifacts'){
-        //     steps{
-        //         archiveArtifacts artifacts: '**/*.html', followSymlinks: false
-        //     }
-        // }
+        stage('Archive The Artifacts'){
+            steps{
+                archiveArtifacts artifacts: '**/*.html', followSymlinks: false
+            }
+        }
+
     }
 
     post{
         success{
-                archiveArtifacts artifacts: '**/*.html', followSymlinks: false
+
+            slackUploadFile filePath: 'output.html', initialComment: 'Here is RSS file '
+            //    archiveArtifacts artifacts: '**/*.html', followSymlinks: false
     
            // archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
         }
