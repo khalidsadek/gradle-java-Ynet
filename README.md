@@ -2,6 +2,6 @@
 
 
 
-![](slack.png)
+![](slack.PNG)
 
-![](pipe-steps.png)
+![](pipe-steps.PNG)
