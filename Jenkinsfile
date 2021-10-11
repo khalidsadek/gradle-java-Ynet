@@ -18,9 +18,8 @@ pipeline{
                 gradle clean
 			    gradle build
 			        '''
-		    	// //cd gradle-yn
 		    	// //chmod +x gradlew
-			    // "./gradlew build"    chmod 755 ./gradlew
+			    // "./gradlew build"   
 			    }
         }
         stage('Run Jar File') {
@@ -29,30 +28,18 @@ pipeline{
             }
         }
 
-    //   stage('Run'){
-    //         steps{
-    //      //   sh 'gradle-yn'    
-	// 	    sh 'gradle run'
-            
-	//     }
-    //     }
-
 
         stage('Archive The Artifacts'){
             steps{
                 archiveArtifacts artifacts: '**/*.html', followSymlinks: false
             }
         }
-
     }
-
     post{
         success{
 
             slackUploadFile filePath: 'output.html', initialComment: 'Here is RSS file ' 
-            //    archiveArtifacts artifacts: '**/*.html', followSymlinks: false
-    
-           // archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
+
         }
     }
 
